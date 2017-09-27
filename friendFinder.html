@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Your new best Friend</title>
+  <!-- Latest compiled and minified CSS & JS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+  <div class="container">
+    <div class="jumbotron">
+      <h1>Find your new best friend</h1>
+      <h3>We have the best freinds in the world</h3>
+      <h4>All other sites have very fake friends</h4>
+      <hr>
+      <a href="/survey"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-plus"></span> register as a friend</button></a>
+      <a href="/friends"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-th-list"></span> See all available friends</button></a>
+      <a href="/home"><button type="button" class="btn btn-danger btn-lg"><span class="glyphicon glyphicon-home"></span></button></a>
+    </div>
+    <div class="row">
+
+      <div class="col-lg-12">
+
+        <div class="panel panel-default">
+          
+          <div class="panel-body">
+  
+            <br>
+            <div class="text-left">
+              <a href="#friends"><button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span> Did we just become best friends? YUP!</button></a>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h3 class="panel-title" id="friends"><strong>Your New Best Friend 😀</strong></h3>
+          </div>
+          <div class="panel-body">
+            <div class="well">
+              <h2 id="name"></h2>
+              <div id="stats">
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+<script>
+    // In this code, jQuery is used to "download" the data from our server
+    // We then dynamically display this content in our table. This is very similar to the group projects you just completed.
+    // It's also very similar to the NYT search application. In fact, I copied a ton of code from there.
+    function runTableQuery() {
+      // Here we get the location of the root page.
+      // We use this instead of explicitly saying the URL is localhost:3001 because the url will change when we deploy.
+      var currentURL = window.location.origin;
+      // The AJAX function uses the URL of our API to GET the data associated with it (initially set to localhost)
+      $.ajax({ url: currentURL + "/api/friends", method: "GET" })
+      .done(function(friendsData) {
+        // Here we are logging the URL so we have access to it for troubleshooting
+        console.log("------------------------------------");
+        console.log("URL: " + currentURL + "/api/friends");
+        console.log("------------------------------------");
+        // Here we then log the NYTData to console, where it will show up as an object.
+        console.log(friendsData);
+        console.log("------------------------------------");
+        var current = friendsData.pop()
+        console.log(current)
+        // Loop through and display each of the customers
+        for (var i = 0; i < friendsData.length; i++) {
+            
+          
+          var bestFriend = [];
+          
+        }
+          for (var j = 0; j < friendsData.length; j++) {
+            console.log(`current ${current}`)
+            console.log(friendsData);
+            if (current.total === friendsData[j].total ){
+                bestFriend = friendsData[i]
+            } else if (current.total - 1 === friendsData[j].total || current.total + 1 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 2 === friendsData[j].total || current.total + 2 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 3 === friendsData[j].total || current.total + 3 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 4 === friendsData[j].total || current.total + 4 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 5 === friendsData[j].total || current.total + 5 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 6 === friendsData[j].total || current.total + 6 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 7 === friendsData[j].total || current.total + 7 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 8 === friendsData[j].total || current.total + 8 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } else if (current.total - 9 === friendsData[j].total || current.total + 9 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            }
+              else if (current.total - 10 === friendsData[j].total || current.total + 10 === friendsData[j].total) {
+                bestFriend = friendsData[j]
+            } 
+            } 
+          
+          console.log(bestFriend);
+          console.log(`current friend ${current.name}`);
+          // Create the HTML Well (Section) and Add the table content for each reserved table
+          var tableSection = $("<div>");
+          tableSection.addClass("well");
+          tableSection.attr("id", "tableWell-" + i + 1);
+          $("#friends").append(tableSection);
+          var tableNumber = i + 1;
+          // Then display the remaining fields in the HTML (Section Name, Date, URL)
+          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>Are you ready!!! </span> | ${current.name} | total: ${current.total} |
+              friendship differential ${current.total - bestFriend.total} <img src="${current.photo}"> </h2>`);
+          if (bestFriend){
+          $("#tableWell-" + i + 1).append(`<h2><span class='label label-primary'>BFFS FORVER...FOOORRREEEVVVVEERRRR </span> | ${bestFriend.name} total: ${bestFriend.total}  <img src="${bestFriend.photo}"> </h2>`);
+        } else {
+            $("#tableWell-" + i + 1).append(`<h2>Best Friend not found 😦</h2>`)
+        }
+      });
+     }
+    
+    runTableQuery();
+    </script>
+
+ 
+</script>
+
+</body>
+</html>

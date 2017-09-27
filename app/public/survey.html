@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Cherry+Cream+Soda|Gochi+Hand|Special+Elite');
+    </style>
+    <meta charset="UTF-8">
+    <title>Find your new best friend</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="../../assets/style.css">
+
+ 
+</head>
+
+<body>
+
+
+
+    <div class=" mainCont container-fluid text-center">
+        <a href="/"><button class="btn">Go back home</button></a>
+        <div class="form-group">
+            <h2> <label class="name" for="formGroupExampleInput">Enter your name</label></h2>
+            <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Your name goes here...." required>
+        </div>
+        <div class="form-group">
+            <h2><label for="formGroupExampleInput2">Add the link to your picture</label></h2>
+            <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Your Picture url goes here..." required>
+        </div>
+    </div>
+    <div class="wrap container-fluid text-center">
+        <h1 class="likert-header">Find your Prefect Match</h1>
+        <form action="">
+            <label class="statement">The more friends the better!</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question1" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question1" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question1" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question1" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question1" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">On rainy days, I want to curl up with a book.</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question2" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question2" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question2" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question2" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question2" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">Eating is a social activity</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question3" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question3" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question3" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question3" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question3" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">High School is a terrible experience</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question4" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question4" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question4" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question4" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question4" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">I would like to try skydiving</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question5" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question5" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question5" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question5" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question5" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">I prefer to stay indoors</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question6" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question6" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question6" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question6" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question6" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">100/2+5 = 55</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question7" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question7" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question7" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question7" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question7" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">Web development is fun!</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question8" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question8" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question8" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question8" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question8" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">Nothing wrong with having a shower beer</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question9" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question9" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question9" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question9" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question9" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <label class="statement">You have a sworn enemy</label>
+            <ul class='likert'>
+                <li>
+                    <input type="radio" name="question10" value="1">
+                    <label>Strongly agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question10" value="2">
+                    <label>Agree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question10" value="3">
+                    <label>Neutral</label>
+                </li>
+                <li>
+                    <input type="radio" name="question10" value="4">
+                    <label>Disagree</label>
+                </li>
+                <li>
+                    <input type="radio" name="question10" value="5">
+                    <label>Strongly disagree</label>
+                </li>
+            </ul>
+            <div class="buttons">
+                <button class="clear btn btn-danger">Clear</button>
+                <button class="submit btn btn-info">Submit</button>
+                <a href="/bestFriends"><button type="submit" class="btn btn-primary btn-md" id="search-btn"><span class="glyphicon glyphicon-search"></span> Finding your BFF</button></a>
+                
+            </div>
+        </form>
+
+        
+
+    </div>
+    
+
+
+</body>
+    <script>
+            var stuff = [];
+    for (i = 1; i <= 10; i++) {
+        var element = document.getElementsByName('question' + [i])
+        stuff.push(element)
+    }
+    for (var i = 0; i < 10; i++) {
+        var random = Math.floor(Math.random() * 5)
+        stuff[i][random].checked = true
+    }
+    $(document).ready(function() {
+         $('.submit').on('click', (e)=>{
+             e.preventDefault();
+            
+             var answers = $('input[name]:checked')
+             var total = []
+            for (var i = 0; i < answers.length; i++) {
+                total.push(parseInt(answers[i].value))
+                // total += parseInt(answers[i].value)
+            }
+            var sum = total.reduce((a,b)=>a+b)
+            console.log('SUM IS: ', sum)
+            var friend = {
+            name: $('#formGroupExampleInput')[0].value.trim(),
+            photo: $('#formGroupExampleInput2')[0].value.trim(),
+            scores: [...total],
+            total:sum
+            }
+            console.log(`friend1: ${friend}`)
+            // or you can make GET here and ge all data and evaluate
+            //or make post here 
+            $.post("/api/friends", friend)
+           
+              .done(function (data) {
+                     
+                     
+                alert(`added ${friend.name} to friends`)
+    });
+            
+         })
+    })
+    
+    
+    
+    </script>
+    
+</html>
